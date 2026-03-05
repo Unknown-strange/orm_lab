@@ -1,0 +1,10 @@
+<h1>Students</h1>
+<ul>
+    {% for student in students %}
+    <li>{{ student.name }} — Courses: 
+        {% for course in student.courses.all %}
+            {{ course.title }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </li>
+{% endfor %}
+</ul>
