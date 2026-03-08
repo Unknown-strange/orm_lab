@@ -1,0 +1,8 @@
+<h1>Deletion of Student</h1>
+<p>Are you sure you want to delete {{student.name}}</p>
+
+<form method="POST">
+    {% crf_token %}
+    <button>Yes, Delete</button>
+    <a href="{% url 'list_students' %}">Cancel</a>
+</form>
